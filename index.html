@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khaisa Pastry & Bakery</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img src="images/syibake.png" alt="Khaisa Logo" class="loader-logo">
+  </div>
+
+  <!-- Top Bar dengan teks bergerak -->
+  <div class="top-bar">
+    <div class="marquee">
+      Pucanganom, Murtigading, Sanden, Blantul, Yogyakarta &nbsp; | &nbsp; +6285624106413
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="nav-links nav-left">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT US</a></li>
+      <li><a href="#">THE CREATIONS</a></li>
+    </ul>
+    <div class="logo">KHAISA PASTRY & BAKERY</div>
+    <ul class="nav-links nav-right">
+      <li><a href="#">LOCATION</a></li>
+      <li><a href="#">CONTACT US</a></li>
+      <li><a href="#">NEWS & PROMO</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Khaisa Pastry & Bakery</h1>
+      <p>Warm bread, delicious taste, always fresh for you</p>
+      <a href="#" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section class="about">
+    <h2>Tentang Kami</h2>
+    <p>Kami membuat roti segar setiap hari dengan bahan terbaik untuk menghadirkan rasa yang tak terlupakan.</p>
+  </section>
+
+  <script>
+    // Loader hilang setelah halaman selesai
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.getElementById("loader").classList.add("hidden");
+      }, 2000);
+    });
+
+    // Toggle menu untuk mobile
+    const toggle = document.getElementById('menu-toggle');
+    const navLinksLeft = document.querySelector('.nav-left');
+    const navLinksRight = document.querySelector('.nav-right');
+
+    toggle.addEventListener('click', () => {
+      navLinksLeft.classList.toggle('active');
+      navLinksRight.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
