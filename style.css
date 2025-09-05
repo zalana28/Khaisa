@@ -90,7 +90,7 @@ body {
   margin-left: 20px;
 }
 
-/* Hero Section dengan background baru */
+/* Hero Section */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/bollolo.png') no-repeat center center/cover;
   height: 100vh;
@@ -180,16 +180,43 @@ body {
 
 /* Responsive untuk HP */
 @media(max-width: 768px) {
-  .navbar { flex-wrap: wrap; }
+  .navbar { 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding: 10px 20px;
+  }
+
   .nav-links { 
     flex-direction: column; 
     display: none;
     width: 100%;
-    background: #2b5124cf;
-    padding: 10px 0;
+    background: #064420;
+    padding: 15px 0;
     text-align: center;
+    gap: 15px;
   }
+
   .nav-links.active { display: flex; }
-  .menu-toggle { display: block; }
-  .logo { margin: 10px auto; }
+
+  .nav-links a {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .nav-links a:hover {
+    color: #2ecc71;
+  }
+
+  .menu-toggle { 
+    display: block; 
+    font-size: 28px;
+    color: #064420;
+    cursor: pointer;
+  }
+
+  .logo { 
+    margin: 10px auto; 
+    font-size: 22px; 
+    text-align: center; 
+  }
 }
