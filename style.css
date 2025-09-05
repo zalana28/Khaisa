@@ -41,9 +41,9 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 30px;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: fixed;
@@ -52,27 +52,22 @@ body {
   z-index: 100;
 }
 
-.navbar .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  transition: all 0.3s ease;
-}
-
-.nav-left { margin-right: auto; }
-.nav-right { margin-left: auto; }
-
-/* Logo bakery */
+/* Logo */
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
   font-weight: 700;
   color: #064420;
-  margin: 0 50px;
   letter-spacing: 1px;
 }
 
-/* Link navbar */
+/* Menu */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #2c3e50;
@@ -85,9 +80,9 @@ body {
 /* Tombol menu mobile */
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
-  margin-left: 20px;
+  color: #064420;
 }
 
 /* Hero Section */
@@ -109,13 +104,11 @@ body {
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  animation: fadeInDown 1.2s ease;
 }
 
 .hero p {
   font-size: 22px;
   margin-bottom: 30px;
-  animation: fadeInUp 1.2s ease;
 }
 
 .btn {
@@ -137,7 +130,6 @@ body {
 .about {
   padding: 80px 20px;
   text-align: center;
-  animation: fadeIn 1.5s ease;
 }
 
 .about h2 {
@@ -174,24 +166,15 @@ body {
 /* Animasi */
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes glow { from { filter: drop-shadow(0 0 5px #27ae60); } to { filter: drop-shadow(0 0 15px #2ecc71); } }
-@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* Responsive untuk HP */
+/* Responsive */
 @media(max-width: 768px) {
-  .navbar { 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    padding: 10px 20px;
-  }
-
-  .nav-links { 
-    flex-direction: column; 
+  .nav-links {
     display: none;
-    width: 100%;
+    flex-direction: column;
     background: #064420;
-    padding: 15px 0;
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
     gap: 15px;
   }
@@ -203,20 +186,9 @@ body {
     font-size: 18px;
   }
 
-  .nav-links a:hover {
-    color: #2ecc71;
-  }
+  .nav-links a:hover { color: #2ecc71; }
 
-  .menu-toggle { 
-    display: block; 
-    font-size: 28px;
-    color: #064420;
-    cursor: pointer;
-  }
+  .menu-toggle { display: block; }
 
-  .logo { 
-    margin: 10px auto; 
-    font-size: 22px; 
-    text-align: center; 
-  }
+  .logo { font-size: 22px; text-align: center; }
 }
